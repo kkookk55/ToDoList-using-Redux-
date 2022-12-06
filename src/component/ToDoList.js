@@ -12,7 +12,8 @@ function ToDoList() {
   const listStyle = {
     border: "3px solid black",
     maxWidth: "250px",
-    height: "150px",
+    minWidth: "250px",
+    height: "160px",
     textAlign: "left",
     listStyle: "none",
     borderRadius: "15px",
@@ -20,8 +21,7 @@ function ToDoList() {
     margin: "20px",
   };
   const pStyle = {
-    width: "100%",
-    height: "35px",
+    maxWidth: "230px",
   };
   const divStyle = {
     display: "grid",
@@ -29,12 +29,13 @@ function ToDoList() {
   };
   const linkStyle = {
     color: "black",
+    fontSize: "12px",
   };
   const btnStyle = {
     borderRadius: "15px",
     marginLeft: "10px",
-    width: "100px",
-    height: "40px",
+    width: "70px",
+    height: "30px",
     backgroundColor: "black",
     color: "white",
   };
@@ -48,9 +49,10 @@ function ToDoList() {
             return (
               <div key={item.id} style={listStyle}>
                 <Link to={`/work/${item.id}`} style={linkStyle}>
-                  <h3>{item.title}</h3>
-                  <p style={pStyle}>{item.text}</p>
+                  상세보기
                 </Link>
+                <h3>{item.title}</h3>
+                <p style={pStyle}>{item.text}</p>
 
                 <button
                   style={btnStyle}

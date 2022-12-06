@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 function Work() {
   const toDoStore = useSelector((state) => state.toDo);
   const param = useParams();
-  const work = toDoStore.find((item) => item.id === parseInt(param.id));
 
   const divStyle = {
     textAlign: "center",
@@ -33,6 +32,7 @@ function Work() {
           return (
             <div>
               <h1>{item.title}</h1>
+              <h3>ID: {item.id}</h3>
               <p style={pStyle}>{item.text}</p>
               <Link to={`/works`}>돌아가기</Link>
             </div>

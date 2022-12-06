@@ -43,8 +43,12 @@ const Works = () => {
     color: "white",
     borderRadius: "15px",
   };
+  const mainStyle = {
+    maxWidth: "1200px",
+    minWidth: "800px",
+  };
   return (
-    <div>
+    <div style={mainStyle}>
       <div style={style}>
         <h1> MY TO DO LIST </h1>
         <label>제목</label>
